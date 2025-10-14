@@ -1,0 +1,112 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+:root {
+    /* COLORS */
+    --color-primary: hsl(341, 80%, 52%);
+    --color-primary-hover: hsl(346, 82%, 61%);
+    --color-primary-active: hsl(351, 90%, 73%);
+    --color-secondary: hsl(0, 0%, 7%);
+    --color-body-bg: hsl(0, 0%, 95%);
+    --color-input-bg: hsl(0, 0%, 16%);
+    --color-text: hsl(0, 0%, 100%);
+    --color-btn: hsl(0, 0%, 25%);
+    --color-btn-hover: hsl(0, 0%, 34%);
+    --color-btn-active: hsl(0, 0%, 44%);
+
+    /* FONT */
+    --font-family: "Roboto", sans-serif;
+    --font-size-btn: 3rem;
+    --font-size-input: 5rem;
+    --font-weight-btn: bold;
+
+    /* WIDTH & HEIGHT */
+    --max-width-calc: 500px;
+    --width-btn: 100px;
+    --height-btn: 100px;
+
+    /* PADDING */
+    --padding-input: 20px;
+    --padding-btns-container: 25px;
+
+    /* BORDER RADIUS */
+    --border-radius-calc: 15px;
+    --border-radius-btn: 50px;
+
+    /* BOX SHADOW */
+    --box-shadow-calc: 0 10px 25px rgba(0, 0, 0, 0.3)
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    min-height: 100vh;
+    font-family: var(--font-family);
+    background-color: var(--color-body-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calc-container {
+    max-width: var(--max-width-calc);
+    background: var(--color-secondary);
+    box-shadow: var(--box-shadow-calc);
+    border-radius: var(--border-radius-calc);
+    overflow: hidden;
+}
+
+.input-display {
+    width: 100%;
+    font-size: var(--font-size-input);
+    padding: var(--padding-input);
+    background: var(--color-input-bg);
+    border: none;
+    color: var(--color-text);
+}
+
+.btns-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: var(--padding-btns-container);
+}
+
+button {
+    font-size: var(--font-size-btn);
+    font-weight: var(--font-weight-btn);
+    width: var(--width-btn);
+    height: var(--height-btn);
+    background: var(--color-btn);
+    color: var(--color-text);
+    border: none;
+    border-radius: var(--border-radius-btn);
+    cursor: pointer;
+}
+
+button:hover {
+    background: var(--color-btn-hover);
+}
+
+button:active {
+    background: var(--color-btn-active);
+}
+
+.operator-btn {
+    background: var(--color-primary);
+}
+
+.operator-btn:hover {
+    background: var(--color-primary-hover);
+}
+
+.operator-btn:active {
+    background: var(--color-primary-active);
+}
