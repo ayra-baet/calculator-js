@@ -69,7 +69,6 @@ body {
     padding: var(--padding-input);
     background: var(--color-input-bg);
     border: none;
-    color: var(--color-text);
 }
 
 .btns-container {
